@@ -280,3 +280,11 @@ Python：Jump_Difficult.py
 Python：GetCubicRoot.py    
 策略：输入一个数x，其立方根是有范围的，假设x最大为2^31-1，则当x>0，立方根范围为[0,1e+4]，这个时候用二分法逐步缩小范围。
 
+#### 2. 快排
+python: quickSort.py  
+策略：递归调用，每次随机选取一个值key，保证key值左边比key小，右边比key大。否则交换。
+
+#### 3. 二分查找
+描述：输入一个有序的数组，查找某个元素。  
+python：BinarySearch.py  
+策略：每次将数组分成两份，两边为start和end，中间值为mid，当x大于中间值时，下次从右边搜索，否则从左边搜索，搜索过程start和end会被更新，当start>=end时，返回mid值。  
