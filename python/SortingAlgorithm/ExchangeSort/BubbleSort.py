@@ -6,7 +6,7 @@ def BubbleSort(array):
     # i控制比较的范围和次数，冒泡需要比较n-1趟
     for i in range(count-2,-1,-1):
         for j in range(0,i+1):
-            if array[j]>array[j+1]:
+            if array[j]>array[j+1]:   # > 才交换，冒泡是稳定的排序
                 temp = array[j+1]
                 array[j+1] = array[j]
                 array[j] = temp
