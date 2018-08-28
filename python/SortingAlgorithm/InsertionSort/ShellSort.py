@@ -6,8 +6,10 @@ def shell_sort(lists):
     group = count / step
     while group > 0:
         # i equals first group positions
+        # 间隔为group为同一组元素，
         for i in range(0, group):
-            j = i + group # 间隔为group为同一组元素，递增
+            # 对某一组元素做插入排序
+            j = i + group # 该组中需要插入的第一个元素
             while j < count:
                 k = j - group # 记录j前面的元素
                 key = lists[j]
@@ -16,7 +18,7 @@ def shell_sort(lists):
                         lists[k + group] = lists[k]
                         lists[k] = key
                     k -= group
-                j += group
+                j += group # 更新需要插入的元素
         group /= step
     return lists
 
