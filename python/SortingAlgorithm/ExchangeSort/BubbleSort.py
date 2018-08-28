@@ -3,8 +3,9 @@ def BubbleSort(array):
     count = len(array)
     if count<=1:
         return array
-    for i in range(count,0,-1):
-        for j in range(0,i-1):
+    # i控制比较的范围和次数，冒泡需要比较n-1趟
+    for i in range(count-2,-1,-1):
+        for j in range(0,i+1):
             if array[j]>array[j+1]:
                 temp = array[j+1]
                 array[j+1] = array[j]
