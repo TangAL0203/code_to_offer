@@ -11,10 +11,10 @@ def quick_sort(lists, left, right):
     while left < right:
         while left < right and lists[right] >= key:
             right -= 1
-        lists[left] = lists[right]
+        lists[left] = lists[right]  # 将right的值传到左边区间, 这时key值丢失(后面有归位操作)
         while left < right and lists[left] <= key:
             left += 1
-        lists[right] = lists[left]
+        lists[right] = lists[left]  # 将left值传到右边区间, 虽然替换了right的值, 但是之前right的值已经传递到左边区间了, 所以right值不会丢失
     lists[right] = key # 将key值归位，此时left==right
     quick_sort(lists, low, left - 1)
     quick_sort(lists, left + 1, high)
