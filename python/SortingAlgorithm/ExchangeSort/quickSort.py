@@ -3,7 +3,7 @@
 def quick_sort(lists, left, right):
     # 快速排序
     if left >= right:
-        return lists
+        return
     key = lists[left]
     low = left
     high = right
